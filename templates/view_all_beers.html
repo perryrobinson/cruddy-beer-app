@@ -1,0 +1,50 @@
+<doctype html="">
+<title>Perry's Favorite Beers</title>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+
+div.a {
+  text-align: center;
+}
+
+</style>
+
+<div class="a">
+
+<table class="table table-bordered">
+    <thead>
+
+    </thead>
+    <tbody>
+            <colgroup>
+            <col style="width: 275px">
+            <col style="width: 300px">
+            <col style="width: 105px">
+            <col style="width: 400px">
+           </colgroup>
+
+           <tr>
+             <th>Beer Name</th>
+             <th>Type</th>
+             <th>ABV</th>
+             <th>Brewery</th>
+           </tr>
+
+           {% for row in data  %}
+               <tr>
+                   <td >{{ row.name }}</td>
+                   <td>{{ row.type }}</td>
+                   <td>{{ row.abv }}</td>
+                   <td>{{ row.breweries.name }}</td>
+               </tr>
+           {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<li><a href="{{ url_for('add_beer') }}">Add a new beer</a></li>
+</div>
+</doctype>

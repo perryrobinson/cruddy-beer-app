@@ -1,0 +1,28 @@
+<h1>New Beer</h1>
+
+{% from "_formhelpers.html" import render_field %}
+<form method="post">
+    <dl>
+        <p>Enter in the information for the beer.</p>
+        {{ form.csrf_token }}
+        {{ render_field(form.name) }}
+        {{ render_field(form.type) }}
+        {{ render_field(form.abv) }}
+
+        <dt>
+          <label for='brewery'>Brewery</label>
+        </dt>
+
+        <dd>
+          <select id="brewery" name="brewery" required>
+            {% for item in brewery_dropdown_data %}
+            <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+          </select>
+        </dd>
+
+        <li><a href="{{ url_for('add_brewery') }}">Click here to add a new brewery</a></li>
+    </dl>
+    <p><input type="submit" value="Submit"></p>
+</form>
+</doctype>
