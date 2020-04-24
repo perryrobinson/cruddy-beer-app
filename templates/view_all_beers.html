@@ -31,6 +31,7 @@ div.a {
              <th>Type</th>
              <th>ABV</th>
              <th>Brewery</th>
+             <th>Delete Beer </th>
            </tr>
 
            {% for row in data  %}
@@ -39,6 +40,7 @@ div.a {
                    <td>{{ row.type }}</td>
                    <td>{{ row.abv }}</td>
                    <td>{{ row.breweries.name }}</td>
+                   <td><a href="{{ '/view_all_beers/delete/%s'%row.id}}">{{ 'Delete' }}</a></td>
                </tr>
            {% endfor %}
     </tbody>

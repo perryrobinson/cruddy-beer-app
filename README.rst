@@ -2,11 +2,12 @@
 cruddy-beer-app
 ==============
 
-Sample CRUD application with Flask and SQLAlchemy
+Sample CRUD applcation using Python, Flask, SQLAlchemy, and SQLite for maintaining a collection of your favorite beer.
 
 
 Requirements
 ============
+Create a virtual environment if you don't want to bloat your installed packages.
 
 Please execute the following commands:
 
@@ -16,8 +17,9 @@ Please execute the following commands:
 
 Running
 =======
+If you would like to start fresh with a new database, you can delete the "beer.db" file and just run "python db_creator.py" to make a new empty database that is setup with the right tables and PK/FK relationships.
 
-Please execute the following command:
+To run the web app, execute the following command:
 
     $ python run.py
 
