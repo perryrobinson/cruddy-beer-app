@@ -12,6 +12,7 @@ Create a virtual environment if you don't want to bloat your installed packages.
 Please execute the following commands:
 
     $ git clone https://github.com/perryrobinson/cruddy-beer-app.git
+    
     $ pip install -r requirements.txt
 
 
