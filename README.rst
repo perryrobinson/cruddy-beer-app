@@ -2,7 +2,7 @@
 cruddy-beer-app
 ==============
 
-Sample CRUD applcation using Python, Flask, SQLAlchemy, and SQLite for maintaining a collection of your favorite beer.
+Sample CRUD application using Python, Flask, SQLAlchemy, and SQLite for maintaining a collection of your favorite beer.
 
 
 Requirements
